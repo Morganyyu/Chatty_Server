@@ -32,15 +32,28 @@ const broadcastUserCount = () => {
   }));
 };
 
+let colours = ['lime', 'maroon', 'navy', 'olive']
+let index = 0;
+const getColour = () => {
+  const id = index + 1;
+  if (index === colours.length - 1) {
+    index = 0;
+  } else {
+    index = id;
+  }
+  return colours[index];
+}
+
 wss.on('connection', (ws) => {
   broadcastUserCount();
+  let colour = getColour();
   console.log('Client connected');
-
   ws.on('message', function (data) {
     let message = JSON.parse(data);
     if (message.messageType === 'post message') {
       message.id = uuidv4();
       message.messageType = 'chat message';
+      message.colour = colour;
     }
     if (message.messageType === 'post notif') {
       message.id = uuidv4();
