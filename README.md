@@ -6,8 +6,8 @@ This Chatty_Server repo should run with the Chatty client at: https://github.com
 
 ## Final Product
 
-!["Screenshot of Chatty Messages"]
-!["Screenshot of Chatty Messages"]
+!["Screenshot of Chatty Messages"](https://github.com/Morganyyu/Chatty-App/blob/master/docs/Images%20from%20URLs.png?raw=true)
+!["Screenshot of Chatty Messages"](https://github.com/Morganyyu/Chatty-App/blob/master/docs/Messages%20and%20Notifications.png?raw=true)
 
 ## Dependencies
 
